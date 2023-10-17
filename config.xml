@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd"> 
+  
+
+<beans>
+<bean id="rcb" class="com.jspider.pkg.User"  autowire="ByName">
+ <property name="userName" value="sharan"></property>
+ <property name="userId" value="21"></property>
+ <property name="homeAddress" ref="homeAddress"></property>
+ <property name="workAddress" ref="workAddress"></property>
+  
+ </bean>
+ 
+ <bean id="homeAddress" class="com.jspider.pkg.Address">
+ <property name="state" value="KA"></property>
+ <property name="city" value="RC"></property>
+ </bean>
+ 
+ <bean id="workAddress" class="com.jspider.pkg.Address" >
+ <property name="state" value="KA"></property>
+ <property name="city" value="BNG"></property>
+ </bean>
+
+ <bean id="a" class="com.jspider.pkg.User" >
+ <property name="userName" value="sharan"></property>
+ <property name="userId" value="21"></property>
+ <property name="homeAddress" ref="b"></property>
+ <property name="workAddress" ref="c"></property>
+  
+ </bean>
+ 
+ <bean id="b" class="com.jspider.pkg.Address">
+ <property name="state" value="KA"></property>
+ <property name="city" value="RC"></property>
+ </bean>
+ 
+ <bean id="c" class="com.jspider.pkg.Address" >
+ <property name="state" value="KA"></property>
+ <property name="city" value="BNG"></property>
+ </bean>
+</beans>
+ 
